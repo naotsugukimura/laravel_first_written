@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/posts/{post}', 'PostController@show');
+Route::get('/', function() {
+    return view('index');
+});
+Route::get('/', function() {
+     return view('index');
 });
